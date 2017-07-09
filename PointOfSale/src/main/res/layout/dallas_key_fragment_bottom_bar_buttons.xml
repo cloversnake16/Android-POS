@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="3"
+    android:background="@drawable/light_gray_background"
+    android:padding="2dp">
+
+    <Button
+        android:id="@+id/replace_key"
+        android:text="@string/add_replace_key"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/top_bar_blue_selector"
+        android:textColor="@drawable/white_text_selector"
+        android:layout_marginEnd="1dp" />
+
+    <Button
+        android:id="@+id/delete_key"
+        android:text="@string/delete_this_key"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/top_bar_blue_selector"
+        android:textColor="@drawable/white_text_selector"
+        android:layout_marginEnd="1dp" />
+
+    <ToggleButton
+        android:id="@+id/give_key_to_other_account"
+        android:textOn="@string/give_key_to_other_account"
+        android:textOff="@string/give_key_to_other_account"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/top_bar_blue_selector"
+        android:textColor="@drawable/white_text_selector"
+        android:layout_marginEnd="1dp" />
+
+
+</LinearLayout>

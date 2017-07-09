@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tbCartFragment"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/bar_height"
+    android:orientation="horizontal"
+    android:minHeight="@dimen/bar_height">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal"
+        android:paddingTop="1dp"
+        android:paddingBottom="1dp"
+        android:background="@drawable/toolbar_border_lightest">
+
+        <TextView
+            android:id="@+id/tableNumber"
+            android:background="#198E5F"
+            android:textColor="#FFFFFF"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="12sp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="1dp"
+            android:visibility="gone" />
+
+        <Spinner
+            android:id="@+id/orderIndex"
+            android:background="#EEE"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="12sp"
+            android:layout_marginStart="8dp"
+            android:visibility="gone"
+            android:layout_marginBottom="1dp"
+            android:overlapAnchor="false" />
+
+        <LinearLayout
+            android:layout_marginStart="5dp"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:scaleType="center"
+                android:layout_marginStart="6dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/customer"
+                style="@style/orderlineTextSub"
+                android:clickable="true"
+                android:textAllCaps="true" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginStart="5dp"
+            android:layout_width="60dp"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal"
+            android:gravity="right|center"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:layout_gravity="right">
+
+            <ImageView
+                android:id="@+id/iv_customer_order_list"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:textColor="@drawable/white_text_selector"
+                android:padding="4dp"
+                android:clickable="false"
+                android:src="@drawable/ic_order_list"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/iv_customer_notes"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:textColor="@drawable/white_text_selector"
+                android:padding="4dp"
+                android:clickable="false"
+                android:src="@drawable/ic_customer"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+</FrameLayout>

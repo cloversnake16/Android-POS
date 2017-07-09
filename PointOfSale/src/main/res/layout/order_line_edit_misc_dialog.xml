@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/order_line_edit_misc_dialog_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:minWidth="350dp">
+
+    <TextView
+        android:id="@+id/product_name_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
+        android:text="@string/product_name_header_text"
+        android:paddingTop="5dp" />
+
+    <EditText
+        android:id="@+id/product_name"
+        android:layout_below="@id/product_name_header"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:inputType="text"
+        android:layout_gravity="center"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/product_price_header"
+        android:layout_below="@id/product_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:text="@string/product_price_header_text"
+        android:paddingTop="5dp" />
+
+    <EditText
+        android:id="@+id/product_price"
+        android:layout_below="@id/product_price_header"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:inputType="numberDecimal"
+        android:layout_gravity="center"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/product_quantity_header"
+        android:layout_below="@id/product_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:text="@string/quantity_header_text"
+        android:paddingTop="5dp" />
+
+    <LinearLayout
+        android:layout_below="@id/product_quantity_header"
+        android:weightSum="3"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_centerHorizontal="true">
+
+        <ImageButton
+            android:id="@+id/qtySubtractButton"
+            android:layout_width="60dp"
+            android:layout_height="fill_parent"
+            android:src="@drawable/ic_minus_red"
+            android:layout_weight="1" />
+
+        <EditText
+            android:id="@+id/qtyText"
+            android:layout_width="80dp"
+            android:layout_height="fill_parent"
+            android:padding="5dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:inputType="numberDecimal" />
+
+        <ImageButton
+            android:id="@+id/qtyAddButton"
+            android:layout_width="60dp"
+            android:layout_height="fill_parent"
+            android:src="@drawable/ic_plus_green"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

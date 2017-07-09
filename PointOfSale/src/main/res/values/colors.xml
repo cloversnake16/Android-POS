@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="style_color_primary">#ffffff</color>
+    <color name="style_color_primary_dark">#ffffff</color>
+    <color name="style_color_accent">#01bcd5</color>
+
+    <color name="style_text_color_primary">#21425d</color>
+    <color name="style_window_background">#ffffff</color>
+
+    <color name="bar_background_color">#ffffffff</color>
+    <color name="bar_text_color">#2d5d82</color>
+    <color name="bar_border_color">#000000</color>
+    <color name="bar_border_color_lighter">#373737</color>
+    <color name="bar_border_color_lightest">#696969</color>
+
+    <color name="btn_default_light_normal">#00000000</color>
+    <color name="btn_default_light_pressed">#40ffffff</color>
+    <color name="btn_important_normal">#4caf50</color>
+    <color name="btn_important_pressed">#57d35c</color>
+    <color name="btn_important_text_color">#ffffff</color>
+    <color name="btn_default_shadow">#99000000</color>
+    <color name="btn_context_menu_normal">#ffffff</color>
+    <color name="btn_context_menu_pressed">#40000000</color>
+    <color name="btn_context_menu_text_red">#ffff0000</color>
+    <color name="green_pay_color">#198E5F</color>
+
+    <color name="tv_background_color">#414141</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="et_orange">#EA9C51</color>
+    <color name="light_orange">#7ceace83</color>
+
+    <color name="exception">#FE5D3C</color>
+    <color name="nav">#1f5887</color>
+    <color name="slate">#454a4e</color>
+    <color name="eee">#eee</color>
+    <color name="disabledViewGray">#cacaca</color>
+
+    <color name="test">#f2f3f3</color>
+    <color name="black_overlay">#66000000</color>
+
+    <color name="snv_secondary_text_disabled_material_light">#24000000</color>
+    <color name="snv_secondary_text_disabled_material_dark">#36ffffff</color>
+
+    <color name="snv_primary_material_light">#ff212121</color>
+    <color name="snv_primary_material_dark">#fff5f5f5</color>
+
+    <color name="snv_secondary_text_default_material_light">#8a000000</color>
+    <color name="snv_secondary_text_default_material_dark">#b3ffffff</color>
+
+    <color name="snv_ripple_material_light">#1f000000</color>
+    <color name="snv_ripple_material_dark">#42ffffff</color>
+
+    <color name="snv_background_material_light">#fffafafa</color>
+    <color name="snv_background_material_dark">#ff303030</color>
+
+    <color name="snv_primary_text_default_material_light">#de000000</color>
+    <color name="snv_primary_text_default_material_dark">#ffffffff</color>
+
+    <color name="snv_primary_text_disabled_material_light">#39000000</color>
+    <color name="snv_primary_text_disabled_material_dark">#4Dffffff</color>
+
+    <color name="snv_default_divider_color">#1f000000</color>
+
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<no.susoft.mobile.pos.ui.adapter.utils.LinearLayoutListView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/split_list2"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="fill_vertical">
+
+    <ListView
+        android:id="@+id/new_order_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:choiceMode="singleChoice"
+        android:background="@drawable/amounts_background_border" />
+</no.susoft.mobile.pos.ui.adapter.utils.LinearLayoutListView>

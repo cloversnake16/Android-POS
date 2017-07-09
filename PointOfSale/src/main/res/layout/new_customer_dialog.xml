@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp">
+
+            <RadioGroup
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/personRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/person"
+                    android:padding="10dp"
+                    android:checked="true"
+                    android:layout_marginEnd="10dp"
+                    android:textColor="#ff616161" />
+
+                <RadioButton
+                    android:id="@+id/companyRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/company"
+                    android:padding="10dp"
+                    android:textColor="#ff616161" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/firstNameLabel"
+            android:text="@string/new_customer_firstname_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/new_customer_firstname"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:maxLines="1" />
+
+        <TextView
+            android:id="@+id/lastNameLabel"
+            android:text="@string/new_customer_lastname_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/new_customer_lastname"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:maxLines="1" />
+
+        <TextView
+            android:text="@string/new_customer_mobile_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/new_customer_mobile"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:lines="1"
+            android:maxLines="1" />
+
+        <TextView
+            android:text="@string/new_customer_email_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/new_customer_email"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:lines="1"
+            android:maxLines="1" />
+
+        <TextView
+            android:text="@string/new_customer_phone_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/new_customer_phone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:lines="1"
+            android:maxLines="1" />
+
+        <TextView
+            android:text="@string/new_customer_address1_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/new_customer_address1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:maxLines="1" />
+
+        <TextView
+            android:text="@string/new_customer_address2_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/new_customer_address2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:maxLines="1" />
+
+        <TextView
+            android:text="@string/new_customer_zip_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/new_customer_zip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:lines="1"
+            android:maxLines="1" />
+
+    </LinearLayout>
+</ScrollView>

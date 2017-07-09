@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eee"
+    android:weightSum="4">
+
+    <TextView
+        android:id="@+id/no_accounts_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/could_not_find_accounts"
+        android:visibility="gone"
+        android:padding="15dp"
+        android:textSize="15sp" />
+
+    <ListView
+        android:id="@+id/user_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:choiceMode="singleChoice">
+
+    </ListView>
+
+    <LinearLayout
+        android:id="@+id/user_key_utils_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:weightSum="3"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <include
+            layout="@layout/dallas_key_fragment_bottom_bar_text"
+            android:id="@+id/dallas_key_fragment_bottom_bar_text"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1" />
+
+        <include
+            layout="@layout/dallas_key_fragment_bottom_bar_buttons"
+            android:id="@+id/dallas_key_fragment_bottom_bar_buttons"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="2" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

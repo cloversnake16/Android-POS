@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="4"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp">
+
+    <TextView
+        android:id="@+id/payment_type_text"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="@string/payment_type"
+        android:layout_gravity="center_vertical"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/payment_type_amount"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_gravity="center_vertical"
+        android:text="@string/payment_amount"
+        android:textSize="16sp"
+        android:gravity="end"
+        android:paddingEnd="3dp" />
+
+    <TextView
+        android:id="@+id/payment_delete_line"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_weight="1"
+        android:text="@string/x_delete_line"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="16sp"
+        android:paddingLeft="30dp"
+        android:gravity="start" />
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

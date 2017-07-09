@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<no.susoft.mobile.pos.ui.view.SquaredFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/flRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="4dp">
+
+    <LinearLayout
+        android:id="@+id/llGridCell"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black">
+
+        <LinearLayout
+            android:id="@+id/llHolder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/holo_green_light"
+            android:layout_margin="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/tvNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/black"
+                    android:fontFamily="sans-serif"
+                    android:text="203" />
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/ivIcon"-->
+                    <!--android:layout_width="50dp"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:background="@drawable/ic_table"-->
+                    <!--android:layout_gravity="center" />-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="28dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="14sp"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/black"
+                        android:fontFamily="sans-serif"
+                        android:layout_marginEnd="8dp"
+                        android:text="@string/amount" />
+
+                    <TextView
+                        android:id="@+id/tvAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="14sp"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/black"
+                        android:fontFamily="sans-serif"
+                        android:text="202,00" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="14sp"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/black"
+                        android:fontFamily="sans-serif"
+                        android:layout_marginEnd="8dp"
+                        android:text="@string/orders" />
+
+                    <TextView
+                        android:id="@+id/tvOrdersCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="14sp"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/black"
+                        android:fontFamily="sans-serif"
+                        android:text="0" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tvCustomerName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="14sp"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/black"
+                        android:fontFamily="sans-serif"
+                        android:text="" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</no.susoft.mobile.pos.ui.view.SquaredFrameLayout>

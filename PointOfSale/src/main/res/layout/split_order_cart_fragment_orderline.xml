@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<no.susoft.mobile.pos.ui.adapter.utils.LinearLayoutListView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:padding="4dp"
+    android:background="@drawable/listview_selector">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:weightSum="10">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Peak Performance Adelie Peak Performance Adelie Zipper Boot Ass Toffee BrownAss Toffee Brown"
+            style="@style/orderlineTextMain"
+            android:layout_weight="5"
+            android:gravity="center_vertical"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tvQuantity"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="3"
+            style="@style/orderlineTextSub"
+            android:gravity="center|top"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tvTotalLinePrice"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="46.68"
+            style="@style/orderlineTextSub"
+            android:paddingEnd="8dp"
+            android:gravity="end|top"
+            android:layout_weight="4"
+            android:singleLine="true"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="10"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp">
+
+        <TextView
+            android:id="@+id/tvDiscount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/discount"
+            style="@style/orderlineTextDiscount"
+            android:layout_weight="1"
+            android:gravity="center_vertical" />
+
+        <TextView
+            android:id="@+id/tvDiscountPercent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10%"
+            style="@style/orderlineTextDiscount"
+            android:layout_weight="7"
+            android:gravity="center_vertical" />
+
+        <TextView
+            android:id="@+id/tvDiscountAmount"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="-4.67"
+            style="@style/orderlineTextDiscount"
+            android:paddingEnd="8dp"
+            android:gravity="end|top"
+            android:layout_weight="2"
+            android:singleLine="true" />
+
+    </LinearLayout>
+
+</no.susoft.mobile.pos.ui.adapter.utils.LinearLayoutListView>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llOrderTotal"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp"
+    android:weightSum="12"
+    android:background="@drawable/green_button_selector"
+    android:paddingStart="15dp">
+
+    <TextView
+        android:id="@+id/tvPay"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:text="@string/pay_total"
+        style="@style/orderlineTextMainWhite"
+        android:gravity="center_vertical"
+        android:layout_weight="5"
+        android:textAllCaps="true"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tvTotalQuantity"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:text="3"
+        style="@style/orderlineTextMainWhite"
+        android:gravity="end"
+        android:textAlignment="center"
+        android:layout_weight="2"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tvTotalSum"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:text="15,56"
+        style="@style/orderlineTextMainWhite"
+        android:paddingEnd="10dp"
+        android:gravity="end|center_vertical"
+        android:layout_weight="5"
+        android:textSize="15sp" />
+
+</LinearLayout>

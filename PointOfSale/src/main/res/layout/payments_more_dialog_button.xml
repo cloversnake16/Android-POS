@@ -1,0 +1,27 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:gravity="center"
+    android:layout_width="150dp"
+    android:layout_height="150dp"
+    style="@style/blueButton">
+
+    <ImageView
+        android:id="@+id/paymentImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="3dp"
+        android:gravity="center_horizontal"
+        android:src="@drawable/ic_invoice"/>
+
+    <TextView
+        android:id="@+id/paymentText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:text="Invoice"
+        android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true" />
+
+</LinearLayout>

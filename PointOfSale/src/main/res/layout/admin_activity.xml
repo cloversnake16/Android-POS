@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="1dp"
+    android:weightSum="4">
+
+    <ListView
+        android:id="@+id/admin_menu_list"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/amounts_background_border"
+        android:clickable="true" />
+
+    <FrameLayout
+        android:id="@+id/admin_fragment"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="3"
+        android:layout_marginEnd="1dp"
+        android:background="#eee" />
+
+</LinearLayout>

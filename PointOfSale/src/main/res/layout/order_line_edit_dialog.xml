@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/order_line_edit_dialog_layout"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/product_quantity_header"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/quantity_header_text"
+        android:gravity="center" />
+
+    <LinearLayout
+        android:layout_below="@id/product_quantity_header"
+        android:id="@+id/edit_qty_buttons_layout"
+        android:orientation="horizontal"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:minWidth="150dp"
+        android:weightSum="3"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/qtySubtractButton"
+            android:layout_width="50dp"
+            android:layout_height="fill_parent"
+            android:src="@drawable/ic_minus_red"
+            android:layout_weight="1" />
+
+        <EditText
+            android:id="@+id/qtyText"
+            android:layout_width="50dp"
+            android:layout_height="fill_parent"
+            android:padding="5dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:inputType="numberDecimal" />
+
+        <ImageButton
+            android:id="@+id/qtyAddButton"
+            android:layout_width="50dp"
+            android:layout_height="fill_parent"
+            android:src="@drawable/ic_plus_green"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+</RelativeLayout>

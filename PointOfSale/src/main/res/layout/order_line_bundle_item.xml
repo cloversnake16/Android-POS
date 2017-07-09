@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:clickable="false"
+    android:descendantFocusability="blocksDescendants"
+    android:focusable="false"
+    android:focusableInTouchMode="false"
+    android:weightSum="100">
+
+    <TextView
+        android:id="@+id/bundle_component_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="80"
+        android:singleLine="true"
+        android:text="Product Name"
+        android:textIsSelectable="false"
+        style="@style/orderlineTextDiscount"
+        android:gravity="center_vertical" />
+
+    <TextView
+        android:id="@+id/bundle_component_price"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="20"
+        android:singleLine="true"
+        android:gravity="end|top"
+        android:text="+120.00"
+        android:textIsSelectable="false"
+        style="@style/orderlineTextDiscount"
+        android:paddingEnd="8dp"/>
+
+
+</LinearLayout>
+

@@ -1,0 +1,93 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:minWidth="500dp"
+    android:minHeight="600dp"
+    tools:context="no.susoft.mobile.pos.ui.dialog.SupplyReportDialog"
+    android:orientation="vertical"
+    android:weightSum="12">
+
+    <LinearLayout
+        android:id="@+id/search_wrapper"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <LinearLayout
+            android:id="@+id/date_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+            <DatePicker
+                android:id="@+id/from_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:datePickerMode="spinner"
+                android:calendarViewShown="false" />
+
+            <DatePicker
+                android:id="@+id/to_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:datePickerMode="spinner"
+                android:calendarViewShown="false" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/time_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+            <TimePicker
+                android:id="@+id/from_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:timePickerMode="spinner" />
+
+            <TimePicker
+                android:id="@+id/to_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:timePickerMode="spinner" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/button_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/print_button"
+                android:paddingStart="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/print" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <ProgressBar
+            android:id="@+id/progress_bar_supply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:paddingTop="10dp"
+            android:progress="1" />
+
+    </LinearLayout>
+
+</LinearLayout>

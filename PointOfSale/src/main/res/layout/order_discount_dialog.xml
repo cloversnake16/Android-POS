@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/order_discount_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+
+        <TextView
+            android:id="@+id/original_order_total"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="6">
+
+            <RadioButton
+                android:id="@+id/order_discount_percent"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <EditText
+                android:id="@+id/percent_input"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:inputType="numberDecimal"
+                android:digits="0123456789.,"
+                android:layout_weight="3"
+                android:textColor="@drawable/partially_disabled_black_text" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="@string/percent"
+                android:labelFor="@+id/percent_input"
+                android:layout_weight="2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="6">
+
+            <RadioButton
+                android:id="@+id/order_discount_amount"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <EditText
+                android:id="@+id/amount_input"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:inputType="numberDecimal"
+                android:digits="0123456789.,"
+                android:layout_weight="3"
+                android:textColor="@drawable/partially_disabled_black_text" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="@string/amount"
+                android:labelFor="@+id/order_amount"
+                android:layout_weight="2" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="6">
+
+            <RadioButton
+                android:id="@+id/order_discount_total"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <EditText
+                android:id="@+id/total_input"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:inputType="numberDecimal"
+                android:digits="0123456789.,"
+                android:layout_weight="3"
+                android:textColor="@drawable/partially_disabled_black_text" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="@string/new_total"
+                android:labelFor="@+id/order_total"
+                android:layout_weight="2" />
+
+        </LinearLayout>
+
+        <Spinner
+            android:id="@+id/order_discount_reason_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_gray_borders" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

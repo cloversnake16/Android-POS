@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/numpad_bottom_btn_bar"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:weightSum="4">
+
+    <ToggleButton
+        android:id="@+id/numpad_bottom_cash_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="fill"
+        android:textOn="@string/cash_button"
+        android:textOff="@string/cash_button"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_weight="1" />
+
+    <ToggleButton
+        android:id="@+id/numpad_bottom_card_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="fill"
+        android:textOn="@string/card_button"
+        android:textOff="@string/card_button"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_weight="1" />
+
+    <ToggleButton
+        android:id="@+id/numpad_bottom_other_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="fill"
+        android:textOn="@string/other_button"
+        android:textOff="@string/other_button"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/numpad_done_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/done"
+        android:fontFamily="sans-serif"
+        style="@style/numpadMenuButton"
+        android:background="@drawable/numpad_menu_selector"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="5dp"
+        android:layout_weight="1"
+
+    />
+
+</LinearLayout>
+

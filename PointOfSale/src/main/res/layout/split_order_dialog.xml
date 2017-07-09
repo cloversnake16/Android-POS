@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:id="@+id/split_header"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:background="@drawable/amounts_background_border"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:text="@string/whole_order"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:background="@drawable/amounts_background_border" />
+
+        <TextView
+            android:id="@+id/split_order_header"
+            android:text="@string/split_order"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:background="@drawable/amounts_background_border"
+            android:clickable="true" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/split_header"
+        android:layout_above="@+id/split_footers"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <no.susoft.mobile.pos.ui.adapter.utils.LinearLayoutListView
+            android:id="@+id/split_list1"
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="fill_vertical">
+
+            <ListView
+                android:id="@+id/current_order_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:choiceMode="singleChoice"
+                android:background="@drawable/amounts_background_border" />
+
+        </no.susoft.mobile.pos.ui.adapter.utils.LinearLayoutListView>
+
+        <no.susoft.mobile.pos.ui.adapter.utils.LinearLayoutListView
+            android:id="@+id/split_list2"
+            android:orientation="horizontal"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="fill_vertical">
+
+            <ListView
+                android:id="@+id/new_order_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:choiceMode="singleChoice"
+                android:background="@drawable/amounts_background_border" />
+        </no.susoft.mobile.pos.ui.adapter.utils.LinearLayoutListView>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/split_footers"
+        android:layout_above="@+id/split_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+
+    >
+
+        <include
+            android:id="@+id/whole_cart_footer"
+            layout="@layout/split_order_cart_fragment_orderline_footer"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/amounts_background_border" />
+
+        <include
+            android:id="@+id/split_cart_footer"
+            layout="@layout/split_order_cart_fragment_orderline_footer"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/amounts_background_border" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/split_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/buttonSplitOption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="@string/split_options"
+            style="@style/blueButton"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp" />
+
+        <Button
+            android:id="@+id/buttonMinus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="@string/minus"
+            style="@style/blueButton"
+            android:layout_weight="1"
+            android:enabled="false"
+            android:textSize="20sp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp" />
+
+        <EditText
+            android:id="@+id/quantity_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:singleLine="true"
+            android:inputType="numberDecimal|numberSigned"
+            android:digits="0123456789.+-*/%()"
+            android:selectAllOnFocus="true" />
+
+        <Button
+            android:id="@+id/buttonPlus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="@string/plus"
+            style="@style/blueButton"
+            android:layout_weight="1"
+            android:enabled="false"
+            android:textSize="20sp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp" />
+
+        <Button
+            android:id="@+id/buttonMove"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="@string/move"
+            style="@style/blueButton"
+            android:layout_weight="1"
+            android:enabled="false"
+            android:textSize="20sp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp" />
+
+
+    </LinearLayout>
+</RelativeLayout>

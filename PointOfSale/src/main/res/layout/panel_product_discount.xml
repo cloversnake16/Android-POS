@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/panel_product_discount"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="8dp"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <TextView
+            android:text="@string/discount_reason"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:textSize="14sp"
+            android:layout_weight="1" />
+
+        <Spinner
+            android:id="@+id/discount_reason_spinner"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textSize="12sp"
+            android:singleLine="true"
+            android:spinnerMode="dropdown"
+            android:dropDownVerticalOffset="1dp"
+            android:layout_weight="2" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:text="@string/discount_amount"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:textSize="14sp"
+            android:layout_weight="1" />
+
+        <EditText
+            android:id="@+id/discount_amount_edittext"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textSize="12sp"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="2" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="180dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:gravity="bottom"
+        android:layout_gravity="center|end"
+        android:paddingEnd="8dp"
+        android:paddingBottom="8dp">
+
+        <Button
+            android:id="@+id/btnDiscountCancel"
+            android:text="@string/cancel"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:background="@drawable/numpad_white_button" />
+
+        <Button
+            android:id="@+id/btnDiscountDone"
+            android:text="@string/done"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="8dp"
+            android:visibility="gone"
+            android:textColor="@android:color/white"
+            android:background="@drawable/numpad_orange_button" />
+
+    </LinearLayout>
+
+</LinearLayout>
+

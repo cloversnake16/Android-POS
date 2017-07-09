@@ -1,0 +1,69 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="wrap_content"
+              android:minWidth="500dp"
+              android:minHeight="500dp"
+              android:layout_height="wrap_content"
+              tools:context="no.susoft.mobile.pos.ui.dialog.OrdersDialog"
+              android:orientation="vertical"
+              android:weightSum="7"
+              android:padding="10dp"
+              android:layout_marginStart="5dp"
+              android:layout_marginEnd="5dp">
+
+    <include
+            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            layout="@layout/cart_fragment_orderline_header" />
+
+    <ListView
+            android:id="@+id/order_details_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:choiceMode="multipleChoice"
+            android:listSelector="#d7d7d7"
+            android:layout_weight="5"/>
+
+    <LinearLayout
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="end|center_vertical|bottom">
+
+        <Button
+                android:id="@+id/details_button_print"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/print"
+                android:layout_margin="5dp"
+                android:layout_marginEnd="40dp"
+                android:padding="5dp"/>
+
+        <Button
+                android:id="@+id/details_button_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cancel"
+                android:layout_margin="5dp"
+                android:padding="5dp"/>
+
+        <Button
+                android:id="@+id/details_button_return"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/return_button"
+                android:layout_margin="5dp"
+                android:padding="5dp"/>
+
+        <Button
+                android:id="@+id/details_button_select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/select_all"
+                android:layout_margin="5dp"
+                android:padding="5dp"/>
+    </LinearLayout>
+
+</LinearLayout>

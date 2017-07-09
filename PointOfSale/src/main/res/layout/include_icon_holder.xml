@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<no.susoft.mobile.pos.ui.slidemenu.StateAwareImageView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/iconHolder"
+    android:layout_width="@dimen/snv_navigation_icon_size"
+    android:layout_height="@dimen/snv_navigation_icon_size"
+    android:layout_weight="0"
+    android:layout_marginRight="@dimen/snv_navigation_icon_padding"
+    android:contentDescription="Navigation item icon"/>

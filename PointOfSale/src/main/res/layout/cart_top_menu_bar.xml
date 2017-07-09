@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cartButtonLinearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="7"
+    android:paddingBottom="1dp"
+    android:background="@drawable/toolbar_border_lighter_disabledviewbackground">
+
+    <RelativeLayout
+        android:id="@+id/rlParkOrder"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:paddingBottom="3dp"
+        android:background="@drawable/edit_panel_borders"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/top_iv_park_button"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textColor="@drawable/white_text_selector"
+            android:padding="5dp"
+            android:clickable="false"
+            android:src="@drawable/ic_save" />
+
+        <TextView
+            android:layout_below="@id/top_iv_park_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/park"
+            android:textSize="12sp"
+            android:textColor="#000000"
+            android:paddingBottom="1dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlLoadOrderButton"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:paddingBottom="3dp"
+        android:background="@drawable/edit_panel_borders">
+
+        <ImageView
+            android:id="@+id/loadCart"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_download"
+            android:padding="5dp"
+
+            />
+
+        <TextView
+            android:layout_below="@id/loadCart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/load"
+            android:textSize="12sp"
+            android:textColor="#000000"
+            android:paddingBottom="1dp" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rlDeleteOrder"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:paddingBottom="3dp"
+        android:background="@drawable/edit_panel_borders">
+
+        <ImageView
+            android:id="@+id/top_button_delete_order"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textSize="14sp"
+            android:text="@string/delete_first_letter"
+            android:textColor="@drawable/white_text_selector"
+            android:src="@drawable/ic_trash"
+            android:padding="5dp"
+            android:scaleType="centerInside"
+
+            />
+
+        <TextView
+            android:layout_below="@id/top_button_delete_order"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/order"
+            android:textSize="12sp"
+            android:textColor="#000000"
+            android:paddingBottom="1dp" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rlAddOrder"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:paddingBottom="3dp"
+        android:background="@drawable/edit_panel_borders">
+
+
+        <ImageView
+            android:id="@+id/addOrder"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_add"
+            android:padding="5dp" />
+
+
+        <TextView
+            android:layout_below="@id/addOrder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/add"
+            android:textSize="12sp"
+            android:textColor="#000000"
+            android:paddingBottom="1dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlTableButton"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:paddingBottom="3dp"
+        android:background="@drawable/edit_panel_borders">
+
+        <ImageView
+            android:id="@+id/table"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_table"
+            android:padding="5dp" />
+
+        <TextView
+            android:layout_below="@id/table"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/table"
+            android:textSize="12sp"
+            android:textColor="#000000"
+            android:paddingBottom="1dp" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rlDeleteLineButton"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:paddingBottom="3dp"
+        android:background="@drawable/edit_panel_borders">
+
+        <ImageView
+            android:id="@+id/deleteItem"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_delete_line"
+            android:padding="5dp" />
+
+        <TextView
+            android:layout_below="@id/deleteItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/line"
+            android:textSize="12sp"
+            android:textColor="#000000"
+            android:paddingBottom="1dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlTakeAwayButton"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:paddingBottom="3dp"
+        android:background="@drawable/edit_panel_borders">
+
+        <ImageView
+            android:id="@+id/takeAwayItem"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_takeaway"
+            android:padding="5dp" />
+
+        <TextView
+            android:layout_below="@id/takeAwayItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/out"
+            android:textSize="12sp"
+            android:textColor="#000000"
+            android:paddingBottom="1dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlMoreButton"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:paddingBottom="3dp"
+        android:background="@drawable/edit_panel_borders">
+
+        <ImageView
+            android:id="@+id/moreImage"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_more_vert"
+            android:padding="5dp" />
+
+        <TextView
+            android:layout_below="@id/moreImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/more"
+            android:textSize="12sp"
+            android:textColor="#000000"
+            android:paddingBottom="1dp" />
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,642 @@
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/Layout"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:weightSum="10"
+              android:background="#ffffff"
+              android:padding="8dp"
+              android:clickable="true"
+              android:focusable="true"
+              android:focusableInTouchMode="true">
+
+    <LinearLayout
+            android:id="@+id/top_panel"
+            android:paddingBottom="5dp"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:baselineAligned="false"
+            android:background="@drawable/amounts_background_border"
+            android:layout_margin="1dp"
+            android:paddingTop="5dp"
+            android:layout_weight="3">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:weightSum="3">
+
+                    <TextView
+                            android:id="@+id/to_pay_text"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/to_pay"
+                            android:textSize="16sp"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:textColor="#000000"
+                            android:layout_weight="1" />
+
+                    <TextView
+                            android:id="@+id/changeText"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:textColor="#000000"
+                            android:layout_weight="1"
+                            android:gravity="end" />
+
+                    <TextView
+                            android:id="@+id/cashRoundAmountText"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:textColor="#767676"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="25dp"
+                    />
+
+                </LinearLayout>
+
+                <Button
+                        android:layout_weight="1"
+                        android:id="@+id/payment_done"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:text="@string/done"
+                        android:enabled="false"
+                        android:visibility="gone"
+                        android:background="@color/green_pay_color"
+                        android:gravity="center"
+                        android:textColor="#FFF" />
+
+            </LinearLayout>
+
+
+        <ListView
+                android:id="@+id/payments_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp">
+
+        </ListView>
+
+    </LinearLayout>
+
+
+    <!--      .............................................................  -->
+    <!--      .............................................................  -->
+    <!--      Numpad buttons start here    									-->
+
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:weightSum="6"
+            android:layout_weight="7">
+
+        <!-- First row -->
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:weightSum="24">
+
+            <ToggleButton
+                    android:id="@+id/buttonOption0"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:fontFamily="sans-serif"
+                    android:textOn="@string/number_0to9"
+                    android:textOff="@string/values"
+                    android:textAllCaps="true"
+                    style="@style/whiteButton"
+                    android:layout_weight="6" />
+
+            <Space
+                    android:layout_width="8dp"
+                    android:layout_height="fill_parent" />
+
+            <EditText
+                    android:id="@+id/numpad_edit_text"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:fontFamily="sans-serif"
+                    android:background="@android:color/white"
+                    style="@style/amountNumberSub"
+                    android:singleLine="true"
+                    android:layout_weight="12"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginTop="4dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true" />
+
+            <Space
+                    android:layout_width="8dp"
+                    android:layout_height="fill_parent" />
+
+            <ImageView
+                    android:id="@+id/buttonBack"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:fontFamily="sans-serif"
+                    android:src="@drawable/ic_backspace"
+                    android:scaleType="centerInside"
+                    style="@style/whiteButton"
+                    android:layout_weight="6"
+                    android:background="@drawable/numpad_white_selector"
+                    android:textColor="@drawable/numpad_number_text_color"
+                    android:clickable="true" />
+
+        </LinearLayout>
+
+        <!-- Second row -->
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:weightSum="24">
+
+            <Button
+                    android:id="@+id/buttonOption1"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/empty"
+                    style="@style/whiteButton"
+                    android:layout_weight="6"
+                    android:enabled="false" />
+
+            <Space
+                    android:layout_width="8dp"
+                    android:layout_height="fill_parent" />
+
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:layout_weight="12"
+                    android:weightSum="12">
+
+                <Button
+                        android:id="@+id/buttonSlash"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/slash"
+                        style="@style/grayButton"
+                        android:layout_weight="4" />
+
+                <Space
+                        android:layout_width="8dp"
+                        android:layout_height="fill_parent" />
+
+                <Button
+                        android:id="@+id/buttonStar"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/star"
+                        style="@style/grayButton"
+                        android:layout_weight="4" />
+
+                <Space
+                        android:layout_width="8dp"
+                        android:layout_height="fill_parent" />
+
+                <Button
+                        android:id="@+id/buttonPercent"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/percent"
+                        style="@style/grayButton"
+                        android:layout_weight="4" />
+
+            </LinearLayout>
+
+            <Space
+                    android:layout_width="8dp"
+                    android:layout_height="fill_parent" />
+
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:layout_weight="6"
+                    android:weightSum="6">
+
+                <Button
+                        android:id="@+id/buttonMinus"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/minus"
+                        style="@style/blueButton"
+                        android:layout_weight="3"
+                        android:enabled="false" />
+
+                <Space
+                        android:layout_width="8dp"
+                        android:layout_height="fill_parent" />
+
+                <Button
+                        android:id="@+id/buttonPlus"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/plus"
+                        app:layout_column="6"
+                        app:layout_row="1"
+                        style="@style/blueButton"
+                        android:layout_weight="3"
+                        android:enabled="false" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Third row -->
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:weightSum="24">
+
+            <ToggleButton
+                    android:id="@+id/btnCash"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/cash_button"
+                    android:textOff="@string/cash_button"
+                    android:textOn="@string/cash_button"
+                    android:textAllCaps="true"
+                    style="@style/blueButton"
+                    android:layout_weight="6" />
+
+            <Space
+                    android:layout_width="8dp"
+                    android:layout_height="fill_parent" />
+
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:layout_weight="12"
+                    android:weightSum="12">
+
+                <Button
+                        android:id="@+id/button200"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/button200"
+                        style="@style/whiteButton"
+                        android:layout_weight="4" />
+
+                <Space
+                        android:layout_width="8dp"
+                        android:layout_height="fill_parent" />
+
+                <Button
+                        android:id="@+id/button500"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/button500"
+                        style="@style/whiteButton"
+                        android:layout_weight="4" />
+
+                <Space
+                        android:layout_width="8dp"
+                        android:layout_height="fill_parent" />
+
+                <Button
+                        android:id="@+id/button1000"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/button1000"
+                        style="@style/whiteButton"
+                        android:layout_weight="4" />
+
+            </LinearLayout>
+
+            <Space
+                    android:layout_width="8dp"
+                    android:layout_height="fill_parent" />
+
+            <ToggleButton
+                    android:id="@+id/buttonQuantity"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/quantity"
+                    android:textOff="@string/quantity"
+                    android:textOn="@string/quantity"
+                    android:textAllCaps="true"
+                    style="@style/grayButton"
+                    android:layout_weight="6"
+                    android:checked="false"
+                    android:enabled="false" />
+
+        </LinearLayout>
+
+        <!-- Fourth row -->
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:weightSum="24">
+
+            <ToggleButton
+                    android:id="@+id/btnOption3"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/card_button"
+                    android:textOn="@string/card_button"
+                    android:textOff="@string/card_button"
+                    android:textAllCaps="true"
+                    style="@style/blueButton"
+                    android:layout_weight="6" />
+
+            <Space
+                    android:layout_width="8dp"
+                    android:layout_height="fill_parent" />
+
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:layout_weight="12"
+                    android:weightSum="12">
+
+                <Button
+                        android:id="@+id/button20"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/button20"
+                        style="@style/whiteButton"
+                        android:layout_weight="4" />
+
+                <Space
+                        android:layout_width="8dp"
+                        android:layout_height="fill_parent" />
+
+                <Button
+                        android:id="@+id/button50"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/button50"
+                        style="@style/whiteButton"
+                        android:layout_weight="4" />
+
+                <Space
+                        android:layout_width="8dp"
+                        android:layout_height="fill_parent" />
+
+                <Button
+                        android:id="@+id/button100"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/button100"
+                        style="@style/whiteButton"
+                        android:layout_weight="4" />
+
+            </LinearLayout>
+
+            <Space
+                    android:layout_width="8dp"
+                    android:layout_height="fill_parent" />
+
+            <ToggleButton
+                    android:id="@+id/buttonPrice"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/price"
+                    android:textOff="@string/price"
+                    android:textOn="@string/price"
+                    android:textAllCaps="true"
+                    style="@style/grayButton"
+                    android:layout_weight="6"
+                    android:checked="false"
+                    android:enabled="false" />
+
+        </LinearLayout>
+
+        <!-- Fifth row -->
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:weightSum="24">
+
+            <ToggleButton
+                    android:id="@+id/btnGiftCard"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/gift_card"
+                    android:textOn="@string/gift_card"
+                    android:textOff="@string/gift_card"
+                    android:textAllCaps="true"
+                    style="@style/blueButton"
+                    android:layout_weight="6" />
+
+            <Space
+                    android:layout_width="8dp"
+                    android:layout_height="fill_parent" />
+
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:layout_weight="12"
+                    android:weightSum="12">
+
+                <Button
+                        android:id="@+id/button1"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/button1"
+                        style="@style/whiteButton"
+                        android:layout_weight="4" />
+
+                <Space
+                        android:layout_width="8dp"
+                        android:layout_height="fill_parent" />
+
+                <Button
+                        android:id="@+id/button5"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/button5"
+                        style="@style/whiteButton"
+                        android:layout_weight="4" />
+
+                <Space
+                        android:layout_width="8dp"
+                        android:layout_height="fill_parent" />
+
+                <Button
+                        android:id="@+id/button10"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/button10"
+                        style="@style/whiteButton"
+                        android:layout_weight="4" />
+
+            </LinearLayout>
+
+            <Space
+                    android:layout_width="8dp"
+                    android:layout_height="fill_parent" />
+
+            <ToggleButton
+                    android:id="@+id/buttonDiscount"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/discount"
+                    android:textOff="@string/discount"
+                    android:textOn="@string/discount"
+                    android:textAllCaps="true"
+                    style="@style/grayButton"
+                    android:layout_weight="6"
+                    android:enabled="false" />
+
+        </LinearLayout>
+
+        <!-- Sixth row -->
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:weightSum="24">
+
+            <ToggleButton
+                    android:id="@+id/btnInvoice"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/invoice"
+                    android:textOn="@string/invoice"
+                    android:textOff="@string/invoice"
+                    android:textAllCaps="true"
+                    style="@style/blueButton"
+                    android:layout_weight="6" />
+
+            <Space
+                    android:layout_width="8dp"
+                    android:layout_height="fill_parent" />
+
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:layout_weight="12"
+                    android:weightSum="12">
+
+                <Button
+                        android:id="@+id/buttonC"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:fontFamily="sans-serif"
+                        android:text="C"
+                        style="@style/whiteButton"
+                        android:layout_weight="4" />
+
+                <Space
+                        android:layout_width="8dp"
+                        android:layout_height="fill_parent" />
+
+                <Button
+                        android:id="@+id/button0"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/button0"
+                        style="@style/whiteButton"
+                        android:layout_weight="4" />
+
+                <Space
+                        android:layout_width="8dp"
+                        android:layout_height="fill_parent" />
+
+                <Button
+                        android:id="@+id/buttonDot"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/buttonDot"
+                        style="@style/whiteButton"
+                        android:layout_weight="4" />
+
+            </LinearLayout>
+
+            <Space
+                    android:layout_width="8dp"
+                    android:layout_height="fill_parent" />
+
+            <ImageView
+                    android:id="@+id/buttonEnter"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:fontFamily="sans-serif"
+                    android:src="@drawable/ic_enter"
+                    android:scaleType="centerInside"
+                    style="@style/whiteButton"
+                    android:layout_weight="6"
+                    android:background="@drawable/numpad_white_selector"
+                    android:textColor="@drawable/numpad_number_text_color"
+                    android:clickable="true" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/numpad_right_button_panel"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="5sp"
+    android:layout_marginStart="5dp"
+    android:weightSum="3">
+
+
+    <Button
+        android:id="@+id/numpad_reward_button"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:text="@string/reward_point"
+        android:fontFamily="sans-serif"
+        style="@style/numpadMenuButton"
+        android:background="@drawable/numpad_menu_selector"
+        android:layout_gravity="bottom"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:gravity="center"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/numpad_gift_card_button"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:text="@string/gift_card"
+        android:fontFamily="sans-serif"
+        style="@style/numpadMenuButton"
+        android:background="@drawable/numpad_menu_selector"
+        android:layout_gravity="bottom"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:gravity="center"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/numpad_tip_amount_button"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:text="@string/tip_amount"
+        android:fontFamily="sans-serif"
+        style="@style/numpadMenuButton"
+        android:background="@drawable/numpad_menu_selector"
+        android:layout_gravity="bottom"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:gravity="center"
+        android:layout_weight="1" />
+
+
+</LinearLayout>

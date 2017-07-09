@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/deleteCart"
+    android:paddingTop="2dp"
+    android:paddingRight="4dp">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_delete" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="2dp"
+        android:paddingBottom="2dp"
+        android:text="Delete"
+        android:textSize="10sp"
+        android:textAllCaps="false"
+        android:textColor="@color/style_text_color_primary"
+        android:fontFamily="sans-serif" />
+
+</LinearLayout>

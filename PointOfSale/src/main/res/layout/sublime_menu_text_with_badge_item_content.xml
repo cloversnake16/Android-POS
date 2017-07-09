@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <include layout="@layout/include_icon_holder"/>
+
+    <include layout="@layout/include_text_hint_content"/>
+
+    <no.susoft.mobile.pos.ui.slidemenu.StateAwareTextView
+        android:id="@+id/badge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:gravity="center_horizontal"
+        android:minWidth="32dp"
+        android:textAppearance="?attr/snvBadgeTextAppearance"
+        app:saTextAppearance="@style/SnvDefaultBadgeTextAppearance"
+        android:maxLines="1"
+        android:ellipsize="end"/>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:minWidth="32dp"
+        style="?android:attr/progressBarStyleSmall"
+        android:visibility="gone"/>
+
+</merge>

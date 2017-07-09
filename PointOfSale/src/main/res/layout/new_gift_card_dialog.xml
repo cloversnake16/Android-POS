@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/amount"
+        android:labelFor="@+id/giftCardAmountText"
+        android:layout_gravity="center_horizontal" />
+
+    <EditText
+        android:id="@+id/giftCardAmountText"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:layout_gravity="center_horizontal"
+        android:textAlignment="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/quantity"
+        android:layout_gravity="center_horizontal"
+        android:labelFor="@+id/giftCardQtyText" />
+
+    <EditText
+        android:id="@+id/giftCardQtyText"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:layout_gravity="center_horizontal"
+        android:text="1"
+        android:textAlignment="center" />
+
+
+</LinearLayout>

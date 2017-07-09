@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/PointOfSale/src/main/java/no/susoft/mobile/pos/SusoftPOSApplication.java" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/PointOfSale/src/main/java/no/susoft/mobile/pos/network/Protocol.java" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/PointOfSale/src/main/java/no/susoft/mobile/pos/network/Request.java" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/PointOfSale/src/main/java/no/susoft/mobile/pos/network/Server.java" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/PointOfSale/src/main/java/no/susoft/mobile/pos/network/ServerStringResponseDelegate.java" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/PointOfSale/src/main/java/no/susoft/mobile/pos/network/SusoftHttpClient.java" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/PointOfSale/src/main/java/no/susoft/mobile/pos/ui/activity/MainActivity.java" charset="ISO-8859-1" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

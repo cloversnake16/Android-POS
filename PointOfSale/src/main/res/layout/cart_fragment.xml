@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/toolbar_border">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="7">
+
+        <include
+            android:id="@+id/cart_menu_bar"
+            layout="@layout/cart_top_menu_bar" />
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/tbCartFragment"
+        layout="@layout/cart_fragment_customer_toolbar" />
+
+    <include
+        android:id="@+id/cartHeader"
+        layout="@layout/cart_fragment_orderline_header" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ListView
+            android:id="@+id/lvOrderLines"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:choiceMode="singleChoice"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:listSelector="#00000000" />
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/cartFooter"
+        layout="@layout/cart_fragment_orderline_footer"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" />
+
+</LinearLayout>

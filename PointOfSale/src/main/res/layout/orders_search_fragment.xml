@@ -1,0 +1,225 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:minWidth="500dp"
+    android:minHeight="500dp"
+    android:layout_height="wrap_content"
+    tools:context="no.susoft.mobile.pos.ui.dialog.OrdersDialog"
+    android:orientation="vertical"
+    android:weightSum="12">
+
+    <RelativeLayout
+        android:id="@+id/search_wrapper"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="9">
+
+        <RelativeLayout
+            android:id="@+id/order_search_date_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_above="@+id/order_search_from_date"
+                android:id="@+id/order_search_from_date_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/to"
+                android:labelFor="@id/order_search_from_date" />
+
+            <DatePicker
+                android:id="@id/order_search_from_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:datePickerMode="spinner"
+                android:calendarViewShown="false" />
+
+            <TextView
+                android:layout_above="@+id/order_search_to_date"
+                android:id="@+id/order_search_to_date_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/from"
+                android:labelFor="@id/order_search_to_date" />
+
+            <DatePicker
+                android:id="@id/order_search_to_date"
+                android:layout_toEndOf="@id/order_search_from_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:datePickerMode="spinner"
+                android:calendarViewShown="false" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:id="@+id/order_search_params_layout"
+            android:layout_below="@id/order_search_date_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/order_search_amount_text"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="@string/amount" />
+
+            <TextView
+                android:layout_toEndOf="@id/order_search_amount_text"
+                android:id="@+id/order_search_from_amount_label"
+                android:paddingStart="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="@string/from" />
+
+            <EditText
+                android:layout_toEndOf="@id/order_search_from_amount_label"
+                android:id="@+id/order_search_from_amount"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:inputType="numberSigned" />
+
+            <TextView
+                android:id="@+id/order_search_to_amount_label"
+                android:layout_toEndOf="@id/order_search_from_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="@string/to" />
+
+            <EditText
+                android:id="@+id/order_search_to_amount"
+                android:layout_toEndOf="@id/order_search_to_amount_label"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:inputType="numberSigned" />
+
+            <TextView
+                android:layout_toEndOf="@id/order_search_to_amount"
+                android:id="@+id/order_search_id_label"
+                android:paddingStart="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="@string/number" />
+
+            <EditText
+                android:id="@+id/order_search_id"
+                android:layout_toEndOf="@id/order_search_id_label"
+                android:layout_width="80dp"
+                android:layout_height="40dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:id="@+id/order_search_params_button"
+            android:layout_below="@id/order_search_params_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="40dp"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/order_search_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/search" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar_orders"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:paddingTop="10dp"
+        android:progress="1"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/no_orders"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="@string/found_no_orders"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:layout_marginTop="5dp"
+        android:visibility="gone"
+        android:layout_weight="2" />
+
+    <LinearLayout
+        android:id="@+id/order_list_header"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:weightSum="1"
+        android:background="#eee"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/order_id_header"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/order_id_header_text"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/order_date_header"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/order_date_header_text"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/order_seller_header"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/order_seller_header"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/order_sum_header"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="@string/order_sum_header"
+            android:textColor="@android:color/black"
+            android:paddingEnd="5dp" />
+
+    </LinearLayout>
+
+    <ListView
+        android:layout_weight="11"
+        android:id="@+id/order_list"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:choiceMode="singleChoice"
+        android:listSelector="#d7d7d7"
+        android:layout_gravity="center_horizontal" />
+
+    <Button
+        android:id="@+id/order_new_search_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="@string/new_search"
+        android:layout_gravity="bottom|center"
+        />
+
+</LinearLayout>

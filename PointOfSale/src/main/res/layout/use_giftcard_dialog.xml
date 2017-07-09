@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:columnCount="2"
+    android:rowCount="6">
+
+    <TextView
+        android:text="@string/shop_issued"
+        android:textSize="14sp"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:layout_gravity="center_vertical" />
+
+    <EditText
+        android:id="@+id/etShopIssued"
+        android:layout_row="0"
+        android:layout_column="1"
+        android:layout_width="130dp"
+        android:layout_height="30dp" />
+
+    <TextView
+        android:text="@string/gift_card_number"
+        android:textSize="14sp"
+        android:layout_row="1"
+        android:layout_column="0"
+        android:layout_gravity="center_vertical" />
+
+    <EditText
+        android:id="@+id/etGiftCardNumber"
+        android:layout_height="30dp"
+        android:layout_row="1"
+        android:layout_column="1"
+        android:layout_width="130dp" />
+
+    <TextView
+        android:text="@string/issued_by"
+        android:textSize="14sp"
+        android:layout_row="2"
+        android:layout_column="0"
+        android:layout_gravity="center_vertical" />
+
+    <EditText
+        android:id="@+id/etIssuedBySeller"
+        android:layout_height="30dp"
+        android:layout_row="2"
+        android:layout_column="1"
+        android:layout_width="130dp" />
+
+    <TextView
+        android:text="@string/issued_date"
+        android:textSize="14sp"
+        android:layout_row="3"
+        android:layout_column="0"
+        android:layout_gravity="center_vertical" />
+
+    <TextView
+        android:id="@+id/tvIssueDate"
+        android:layout_height="30dp"
+        android:layout_row="3"
+        android:layout_column="1"
+        android:layout_width="130dp" />
+
+    <TextView
+        android:text="@string/gift_card_current_amount"
+        android:textSize="14sp"
+        android:layout_row="4"
+        android:layout_column="0"
+        android:layout_gravity="center_vertical" />
+
+    <TextView
+        android:id="@+id/tvGiftCardCurrentAmount"
+        android:layout_height="30dp"
+        android:layout_row="4"
+        android:layout_column="1"
+        android:layout_width="130dp" />
+
+    <TextView
+        android:text="@string/amount_to_use"
+        android:textSize="14sp"
+        android:layout_row="5"
+        android:layout_column="0"
+        android:layout_gravity="center_vertical" />
+
+    <EditText
+        android:id="@+id/etGiftCardAmountToUse"
+        android:layout_height="30dp"
+        android:layout_row="5"
+        android:layout_column="1"
+        android:layout_width="130dp" />
+
+
+</GridLayout>

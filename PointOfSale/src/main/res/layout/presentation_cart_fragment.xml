@@ -1,0 +1,40 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:id="@+id/pres_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/toolbar_border">
+
+    <include
+        android:id="@+id/pres_tbCartFragment"
+        layout="@layout/presentation_cart_fragment_toolbar" />
+
+    <include
+        android:id="@+id/pres_cartHeader"
+        layout="@layout/cart_fragment_orderline_header" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/toolbar_border"
+        android:layout_weight="1">
+
+        <ListView
+            android:id="@+id/pres_lvOrderLines"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:choiceMode="singleChoice"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true" />
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/pres_cartFooter"
+        layout="@layout/presentation_cart_fragment_orderline_footer"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" />
+
+</LinearLayout>

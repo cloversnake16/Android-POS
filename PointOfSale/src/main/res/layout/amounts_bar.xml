@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/Amounts"
+    android:paddingBottom="5dp"
+    android:weightSum="0.9"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="10dp"
+    android:baselineAligned="false"
+    android:background="@drawable/amounts_background_border"
+    android:layout_margin="1dp"
+    android:paddingTop="5dp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight=".30">
+
+        <android.support.v7.widget.GridLayout
+            android:id="@+id/balanceGrid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:columnCount="3"
+            app:rowCount="2"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/balanceMainNumber"
+                app:layout_columnSpan="2"
+                app:layout_rowSpan="2"
+                style="@style/amountNumberMain" />
+
+            <TextView
+                android:id="@+id/balanceSubNumber"
+                app:layout_columnSpan="1"
+                app:layout_rowSpan="1"
+                app:layout_row="0"
+                app:layout_column="2"
+                style="@style/amountNumberSub" />
+
+
+        </android.support.v7.widget.GridLayout>
+
+        <TextView
+            android:text="Balance due"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            style="@style/amountText"
+            android:id="@+id/changeText" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight=".30">
+
+        <android.support.v7.widget.GridLayout
+            android:id="@+id/tenderedGrid"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            app:columnCount="3"
+            app:rowCount="2"
+            android:layout_weight=".30"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/tenderedMainNumber"
+                app:layout_columnSpan="2"
+                app:layout_rowSpan="2"
+                style="@style/amountNumberMain"
+
+            />
+
+            <TextView
+                android:id="@+id/tenderedSubNumber"
+                app:layout_columnSpan="1"
+                app:layout_rowSpan="1"
+                app:layout_row="0"
+                app:layout_column="2"
+                style="@style/amountNumberSub" />
+
+
+        </android.support.v7.widget.GridLayout>
+
+        <TextView
+            android:text="Amount tendered"
+            style="@style/amountText"
+            android:id="@+id/tenderedText" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight=".30">
+
+        <android.support.v7.widget.GridLayout
+            android:id="@+id/changeGrid"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            app:columnCount="3"
+            app:rowCount="2"
+            android:layout_weight=".30"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/changeMainNumber"
+                app:layout_columnSpan="2"
+                app:layout_rowSpan="2"
+                style="@style/amountNumberMain" />
+
+            <TextView
+                android:id="@+id/changeSubNumber"
+                app:layout_columnSpan="1"
+                app:layout_rowSpan="1"
+                app:layout_row="0"
+                app:layout_column="2"
+                style="@style/amountNumberSub" />
+
+
+        </android.support.v7.widget.GridLayout>
+
+        <TextView
+            android:text="Change"
+            android:gravity="center"
+            style="@style/amountText"
+            android:id="@+id/changeText2" />
+
+    </LinearLayout>
+
+</LinearLayout>

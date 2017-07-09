@@ -1,0 +1,120 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:minWidth="500dp"
+    android:layout_height="wrap_content"
+    tools:context="no.susoft.mobile.pos.ui.dialog.CustomerSearchDialog"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/searchProductDialogText"
+        android:layout_gravity="center_horizontal" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <EditText
+            android:id="@+id/product_search_text"
+            android:layout_height="match_parent"
+            android:singleLine="true"
+            android:gravity="fill_horizontal"
+            android:layout_weight="4"
+            android:layout_width="0dp" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/product_search_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="@string/search" />
+
+            <ProgressBar
+                android:id="@+id/product_search_progress_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:indeterminate="true"
+                android:progress="1"
+                android:layout_centerInParent="true" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/product_search_no_match"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:text="@string/foundNoMatches"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:layout_marginTop="5dp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/product_search_list_header"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/list_product_name_header"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:text="@string/product_name_header_text"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/list_product_description_header"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:text="@string/product_description_header_text"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/list_product_stock_header"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="@string/stock"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/list_product_price_header"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="@string/product_price_header_text"
+            android:textColor="@android:color/black" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/product_search_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:choiceMode="singleChoice"
+        android:listSelector="#d7d7d7" />
+
+
+</LinearLayout>

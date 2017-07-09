@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="PayPoint">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/PointOfSale/lib/PayPoint.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

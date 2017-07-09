@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<no.susoft.mobile.pos.ui.view.SquaredFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/flRoot"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:padding="4dp">
+
+    <LinearLayout
+        android:id="@+id/llGridCell"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/img_square_placeholder"
+            android:layout_margin="1dp">
+
+            <ImageView
+                android:id="@+id/ivCell"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp" />
+
+            <RelativeLayout
+                android:id="@+id/rlTextHolder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true">
+
+                <TextView
+                    android:id="@+id/tvCellName"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:textSize="12sp"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:shadowColor="@android:color/black"
+                    android:shadowRadius="2"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:fontFamily="sans-serif"
+                    android:text="" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</no.susoft.mobile.pos.ui.view.SquaredFrameLayout>

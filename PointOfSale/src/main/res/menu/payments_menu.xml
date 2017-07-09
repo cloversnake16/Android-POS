@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/payment_invoice"
+        android:title="@string/invoice"
+        android:icon="@drawable/ic_invoice" />
+    <item
+        android:id="@+id/payment_cheque"
+        android:title="@string/cheque"
+        android:icon="@drawable/ic_cheque" />
+    <item
+        android:id="@+id/payment_bonus"
+        android:title="Bonus"
+        android:icon="@drawable/ic_bonus" />
+    <item
+        android:id="@+id/payment_external_giftcard"
+        android:title="External Giftcard"
+        android:icon="@drawable/ic_giftcard" />
+</menu>

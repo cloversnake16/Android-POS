@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="no.susoft.mobile.pos">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+
+    <supports-screens
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <application
+        android:name=".SusoftPOSApplication"
+        android:allowBackup="false"
+        android:icon="@drawable/ic_susoft_beta"
+        android:label="@string/application_name"
+        android:theme="@style/AppTheme"
+        tools:replace="android:label, android:allowBackup">
+        <activity
+            android:name=".ui.activity.MainActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustResize"
+            android:configChanges="locale|layoutDirection"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar.FullScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <!--<intent-filter>-->
+                <!--<action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />-->
+            <!--</intent-filter>-->
+
+            <!--<meta-data-->
+                <!--android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"-->
+                <!--android:resource="@xml/device_filter" />-->
+        </activity>
+        <activity
+            android:name=".ui.activity.AccountActivity"
+            android:parentActivityName=".ui.activity.MainActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/AppTheme.NoActionBar.FullScreen">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="no.susoft.mobile.pos.ui.activity.MainActivity" />
+        </activity>
+        <activity
+            android:name="no.susoft.mobile.pos.ui.activity.ProtocolMismatchActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/AppTheme.NoActionBar.FullScreen"></activity>
+        <activity
+            android:name=".ui.activity.WebViewActivity"
+            android:parentActivityName=".ui.activity.MainActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/AppTheme.NoActionBar.FullScreen">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="no.susoft.mobile.pos.ui.activity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".ui.activity.AdminActivity"
+            android:parentActivityName=".ui.activity.MainActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/AppTheme.NoActionBar.FullScreen">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="no.susoft.mobile.pos.ui.activity.MainActivity" />
+        </activity>
+
+        <service android:name="no.susoft.mobile.pos.updater.UpdateService" />
+        <service android:name="no.susoft.mobile.pos.hardware.scale.ScaleDeviceService" />
+        <service android:name="com.ingenico.pclservice.PclService" />
+        <service android:name="com.ingenico.pclservice.BluetoothService" />
+        <service
+            android:name="no.susoft.mobile.pos.wfdisplay.util.MessageService"
+            android:enabled="true" />
+        <!--<service android:name="no.susoft.mobile.pos.usbdisplay.UsbHostService" />-->
+
+        <receiver android:name="no.susoft.mobile.pos.updater.WakefulReceiver" />
+
+    </application>
+
+</manifest>

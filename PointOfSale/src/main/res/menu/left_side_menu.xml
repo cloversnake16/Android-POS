@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Group
+        android:id="@+id/lm_group_terminal"
+        app:collapsible="true"
+        app:collapsed="true"
+        android:checkableBehavior="single">
+
+        <GroupHeader
+            android:id="@+id/lm_group_terminal_header"
+            android:title="@string/terminal"
+            android:checkable="false" />
+
+        <Text
+            android:id="@+id/lm_x_report"
+            android:title="@string/x_report"
+            android:checkable="false"
+            app:showIconSpace="true" />
+
+        <Text
+            android:id="@+id/lm_z_report"
+            android:title="@string/z_report"
+            android:checkable="false"
+            app:showIconSpace="true" />
+
+        <Text
+            android:id="@+id/lm_reconciliation"
+            android:title="@string/reconciliation"
+            android:checkable="false"
+            app:showIconSpace="true" />
+
+        <Text
+            android:id="@+id/lm_print_last_trans_result"
+            android:title="@string/print_last_trans_result"
+            android:checkable="false"
+            app:showIconSpace="true" />
+
+    </Group>
+
+    <Separator android:id="@+id/separator_item_2" />
+
+    <Group
+        android:id="@+id/lm_group_cashcount"
+        app:collapsible="true"
+        app:collapsed="true"
+        android:checkableBehavior="single">
+
+        <GroupHeader
+            android:id="@+id/lm_group_cashcount_header"
+            android:title="@string/cashcount"
+            android:checkable="false" />
+
+        <Text
+            android:id="@+id/lm_cashcount"
+            android:title="@string/cashcount"
+            android:checkable="false"
+            app:showIconSpace="true" />
+
+        <Text
+            android:id="@+id/lm_voucher"
+            android:title="@string/voucher"
+            android:checkable="false"
+            app:showIconSpace="true" />
+
+        <Text
+            android:id="@+id/lm_open_cashdraw"
+            android:title="@string/open_cashdraw"
+            android:checkable="false"
+            app:showIconSpace="true" />
+
+    </Group>
+
+    <Separator android:id="@+id/separator_item_3" />
+
+    <Text
+        android:id="@+id/lm_order_search"
+        android:title="@string/order_search"
+        android:checkable="false" />
+
+    <Separator android:id="@+id/separator_item_4" />
+
+    <Text
+        android:id="@+id/lm_giftcards"
+        android:title="@string/giftcards"
+        android:checkable="false" />
+
+    <Separator android:id="@+id/separator_item_5" />
+
+    <Text
+        android:id="@+id/lm_reprint_receipt"
+        android:title="@string/reprint_receipt"
+        android:checkable="false" />
+
+    <Separator android:id="@+id/separator_item_6" />
+
+    <Group
+        android:id="@+id/lm_group_stock"
+        app:collapsible="true"
+        app:collapsed="true"
+        android:checkableBehavior="single">
+
+        <GroupHeader
+            android:id="@+id/lm_group_stock_header"
+            android:title="@string/stock"
+            android:checkable="false" />
+
+        <Text
+            android:id="@+id/lm_stock_order"
+            android:title="@string/stock_order"
+            android:checkable="false"
+            app:showIconSpace="true" />
+
+        <Text
+            android:id="@+id/lm_stock_movement"
+            android:title="@string/stock_movement"
+            android:checkable="false"
+            app:showIconSpace="true" />
+
+        <Text
+            android:id="@+id/lm_stock_correction"
+            android:title="@string/stock_correction"
+            android:checkable="false"
+            app:showIconSpace="true" />
+
+        <Text
+            android:id="@+id/lm_stock_return"
+            android:title="@string/stock_return"
+            android:checkable="false"
+            app:showIconSpace="true" />
+
+    </Group>
+
+    <Separator android:id="@+id/separator_item_7" />
+
+    <Group
+        android:id="@+id/lm_dashboard"
+        app:collapsible="true"
+        app:collapsed="true"
+        android:checkableBehavior="single">
+
+        <GroupHeader
+            android:id="@+id/lm_group_dashboard_header"
+            android:title="@string/dashboard"
+            android:checkable="false" />
+
+        <Text
+            android:id="@+id/lm_key_shopindicators"
+            android:title="@string/week_sale"
+            android:checkable="false"
+            app:showIconSpace="true" />
+
+        <Text
+            android:id="@+id/lm_key_perfomance"
+            android:title="@string/key_performance"
+            android:checkable="false"
+            app:showIconSpace="true" />
+
+        <Text
+            android:id="@+id/lm_supply_report"
+            android:title="@string/supply_report"
+            android:checkable="false"
+            app:showIconSpace="true" />
+
+    </Group>
+
+    <Separator android:id="@+id/separator_item_8" />
+
+    <Text
+        android:id="@+id/lm_chat"
+        android:title="@string/chat"
+        android:checkable="false"
+        app:showIconSpace="false" />
+
+
+    <Separator android:id="@+id/separator_item_9" />
+
+    <Text
+        android:id="@+id/lm_issent_fix"
+        android:title="Resend"
+        android:checkable="false"
+        app:showIconSpace="false" />
+
+    <!--<Text-->
+        <!--android:id="@+id/lm_test"-->
+        <!--android:title="@string/test"-->
+        <!--android:checkable="false"-->
+        <!--app:showIconSpace="false" />-->
+
+    <!--<Text-->
+        <!--android:id="@+id/lm_test2"-->
+        <!--android:title="@string/test"-->
+        <!--android:checkable="false"-->
+        <!--app:showIconSpace="false" />-->
+
+    <!--<Text-->
+        <!--android:id="@+id/lm_test3"-->
+        <!--android:title="@string/test"-->
+        <!--android:checkable="false"-->
+        <!--app:showIconSpace="false" />-->
+
+</menu>
